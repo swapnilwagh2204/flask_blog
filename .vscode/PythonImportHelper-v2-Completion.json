@@ -1,0 +1,605 @@
+[
+    {
+        "label": "FlaskForm",
+        "importPath": "flask_wtf",
+        "description": "flask_wtf",
+        "isExtraImport": true,
+        "detail": "flask_wtf",
+        "documentation": {
+            "value": "\n```python\nimport flask_wtf\n```\n",
+            "supportThemeIcons": false
+        }
+    },
+    {
+        "label": "StringField",
+        "importPath": "wtforms",
+        "description": "wtforms",
+        "isExtraImport": true,
+        "detail": "wtforms",
+        "documentation": {
+            "value": "\n```python\nimport wtforms\n```\n",
+            "supportThemeIcons": false
+        }
+    },
+    {
+        "label": "PasswordField",
+        "importPath": "wtforms",
+        "description": "wtforms",
+        "isExtraImport": true,
+        "detail": "wtforms",
+        "documentation": {
+            "value": "\n```python\nimport wtforms\n```\n",
+            "supportThemeIcons": false
+        }
+    },
+    {
+        "label": "SubmitField",
+        "importPath": "wtforms",
+        "description": "wtforms",
+        "isExtraImport": true,
+        "detail": "wtforms",
+        "documentation": {
+            "value": "\n```python\nimport wtforms\n```\n",
+            "supportThemeIcons": false
+        }
+    },
+    {
+        "label": "BooleanField",
+        "importPath": "wtforms",
+        "description": "wtforms",
+        "isExtraImport": true,
+        "detail": "wtforms",
+        "documentation": {
+            "value": "\n```python\nimport wtforms\n```\n",
+            "supportThemeIcons": false
+        }
+    },
+    {
+        "label": "DataRequired",
+        "importPath": "wtforms.validators",
+        "description": "wtforms.validators",
+        "isExtraImport": true,
+        "detail": "wtforms.validators",
+        "documentation": {
+            "value": "\n```python\nimport wtforms.validators\n```\n",
+            "supportThemeIcons": false
+        }
+    },
+    {
+        "label": "Length",
+        "importPath": "wtforms.validators",
+        "description": "wtforms.validators",
+        "isExtraImport": true,
+        "detail": "wtforms.validators",
+        "documentation": {
+            "value": "\n```python\nimport wtforms.validators\n```\n",
+            "supportThemeIcons": false
+        }
+    },
+    {
+        "label": "Email",
+        "importPath": "wtforms.validators",
+        "description": "wtforms.validators",
+        "isExtraImport": true,
+        "detail": "wtforms.validators",
+        "documentation": {
+            "value": "\n```python\nimport wtforms.validators\n```\n",
+            "supportThemeIcons": false
+        }
+    },
+    {
+        "label": "EqualTo",
+        "importPath": "wtforms.validators",
+        "description": "wtforms.validators",
+        "isExtraImport": true,
+        "detail": "wtforms.validators",
+        "documentation": {
+            "value": "\n```python\nimport wtforms.validators\n```\n",
+            "supportThemeIcons": false
+        }
+    },
+    {
+        "label": "ValidationError",
+        "importPath": "wtforms.validators",
+        "description": "wtforms.validators",
+        "isExtraImport": true,
+        "detail": "wtforms.validators",
+        "documentation": {
+            "value": "\n```python\nimport wtforms.validators\n```\n",
+            "supportThemeIcons": false
+        }
+    },
+    {
+        "label": "User",
+        "importPath": "flaskblog.models",
+        "description": "flaskblog.models",
+        "isExtraImport": true,
+        "detail": "flaskblog.models",
+        "documentation": {
+            "value": "\n```python\nimport flaskblog.models\n```\n",
+            "supportThemeIcons": false
+        }
+    },
+    {
+        "label": "datetime",
+        "importPath": "datetime",
+        "description": "datetime",
+        "isExtraImport": true,
+        "detail": "datetime",
+        "documentation": {
+            "value": "\n```python\nimport datetime\n```\n",
+            "supportThemeIcons": false
+        }
+    },
+    {
+        "label": "db",
+        "importPath": "flaskblog",
+        "description": "flaskblog",
+        "isExtraImport": true,
+        "detail": "flaskblog",
+        "documentation": {
+            "value": "\n```python\nimport flaskblog\n```\n",
+            "supportThemeIcons": false
+        }
+    },
+    {
+        "label": "login_manager",
+        "importPath": "flaskblog",
+        "description": "flaskblog",
+        "isExtraImport": true,
+        "detail": "flaskblog",
+        "documentation": {
+            "value": "\n```python\nimport flaskblog\n```\n",
+            "supportThemeIcons": false
+        }
+    },
+    {
+        "label": "routes",
+        "importPath": "flaskblog",
+        "description": "flaskblog",
+        "isExtraImport": true,
+        "detail": "flaskblog",
+        "documentation": {
+            "value": "\n```python\nimport flaskblog\n```\n",
+            "supportThemeIcons": false
+        }
+    },
+    {
+        "label": "app",
+        "importPath": "flaskblog",
+        "description": "flaskblog",
+        "isExtraImport": true,
+        "detail": "flaskblog",
+        "documentation": {
+            "value": "\n```python\nimport flaskblog\n```\n",
+            "supportThemeIcons": false
+        }
+    },
+    {
+        "label": "UserMixin",
+        "importPath": "flask_login",
+        "description": "flask_login",
+        "isExtraImport": true,
+        "detail": "flask_login",
+        "documentation": {
+            "value": "\n```python\nimport flask_login\n```\n",
+            "supportThemeIcons": false
+        }
+    },
+    {
+        "label": "login_user",
+        "importPath": "flask_login",
+        "description": "flask_login",
+        "isExtraImport": true,
+        "detail": "flask_login",
+        "documentation": {
+            "value": "\n```python\nimport flask_login\n```\n",
+            "supportThemeIcons": false
+        }
+    },
+    {
+        "label": "current_user",
+        "importPath": "flask_login",
+        "description": "flask_login",
+        "isExtraImport": true,
+        "detail": "flask_login",
+        "documentation": {
+            "value": "\n```python\nimport flask_login\n```\n",
+            "supportThemeIcons": false
+        }
+    },
+    {
+        "label": "logout_user",
+        "importPath": "flask_login",
+        "description": "flask_login",
+        "isExtraImport": true,
+        "detail": "flask_login",
+        "documentation": {
+            "value": "\n```python\nimport flask_login\n```\n",
+            "supportThemeIcons": false
+        }
+    },
+    {
+        "label": "login_required",
+        "importPath": "flask_login",
+        "description": "flask_login",
+        "isExtraImport": true,
+        "detail": "flask_login",
+        "documentation": {
+            "value": "\n```python\nimport flask_login\n```\n",
+            "supportThemeIcons": false
+        }
+    },
+    {
+        "label": "LoginManager",
+        "importPath": "flask_login",
+        "description": "flask_login",
+        "isExtraImport": true,
+        "detail": "flask_login",
+        "documentation": {
+            "value": "\n```python\nimport flask_login\n```\n",
+            "supportThemeIcons": false
+        }
+    },
+    {
+        "label": "render_template",
+        "importPath": "flask",
+        "description": "flask",
+        "isExtraImport": true,
+        "detail": "flask",
+        "documentation": {
+            "value": "\n```python\nimport flask\n```\n",
+            "supportThemeIcons": false
+        }
+    },
+    {
+        "label": "url_for",
+        "importPath": "flask",
+        "description": "flask",
+        "isExtraImport": true,
+        "detail": "flask",
+        "documentation": {
+            "value": "\n```python\nimport flask\n```\n",
+            "supportThemeIcons": false
+        }
+    },
+    {
+        "label": "flash",
+        "importPath": "flask",
+        "description": "flask",
+        "isExtraImport": true,
+        "detail": "flask",
+        "documentation": {
+            "value": "\n```python\nimport flask\n```\n",
+            "supportThemeIcons": false
+        }
+    },
+    {
+        "label": "redirect",
+        "importPath": "flask",
+        "description": "flask",
+        "isExtraImport": true,
+        "detail": "flask",
+        "documentation": {
+            "value": "\n```python\nimport flask\n```\n",
+            "supportThemeIcons": false
+        }
+    },
+    {
+        "label": "request",
+        "importPath": "flask",
+        "description": "flask",
+        "isExtraImport": true,
+        "detail": "flask",
+        "documentation": {
+            "value": "\n```python\nimport flask\n```\n",
+            "supportThemeIcons": false
+        }
+    },
+    {
+        "label": "Flask",
+        "importPath": "flask",
+        "description": "flask",
+        "isExtraImport": true,
+        "detail": "flask",
+        "documentation": {
+            "value": "\n```python\nimport flask\n```\n",
+            "supportThemeIcons": false
+        }
+    },
+    {
+        "label": "app",
+        "importPath": "flaskblog.__init__",
+        "description": "flaskblog.__init__",
+        "isExtraImport": true,
+        "detail": "flaskblog.__init__",
+        "documentation": {
+            "value": "\n```python\nimport flaskblog.__init__\n```\n",
+            "supportThemeIcons": false
+        }
+    },
+    {
+        "label": "bcrypt",
+        "importPath": "flaskblog.__init__",
+        "description": "flaskblog.__init__",
+        "isExtraImport": true,
+        "detail": "flaskblog.__init__",
+        "documentation": {
+            "value": "\n```python\nimport flaskblog.__init__\n```\n",
+            "supportThemeIcons": false
+        }
+    },
+    {
+        "label": "db",
+        "importPath": "flaskblog.__init__",
+        "description": "flaskblog.__init__",
+        "isExtraImport": true,
+        "detail": "flaskblog.__init__",
+        "documentation": {
+            "value": "\n```python\nimport flaskblog.__init__\n```\n",
+            "supportThemeIcons": false
+        }
+    },
+    {
+        "label": "SQLAlchemy",
+        "importPath": "flask_sqlalchemy",
+        "description": "flask_sqlalchemy",
+        "isExtraImport": true,
+        "detail": "flask_sqlalchemy",
+        "documentation": {
+            "value": "\n```python\nimport flask_sqlalchemy\n```\n",
+            "supportThemeIcons": false
+        }
+    },
+    {
+        "label": "Bcrypt",
+        "importPath": "flask_bcrypt",
+        "description": "flask_bcrypt",
+        "isExtraImport": true,
+        "detail": "flask_bcrypt",
+        "documentation": {
+            "value": "\n```python\nimport flask_bcrypt\n```\n",
+            "supportThemeIcons": false
+        }
+    },
+    {
+        "label": "RegistrationForm",
+        "kind": 6,
+        "importPath": "flaskblog.forms",
+        "description": "flaskblog.forms",
+        "peekOfCode": "class RegistrationForm(FlaskForm):\n    username = StringField('Username',\n                           validators=[DataRequired(), Length(min=2, max=20)])\n    email = StringField('Email',\n                        validators=[DataRequired(), Email()])\n    password = PasswordField('Password', validators=[DataRequired()])\n    confirm_password = PasswordField('Confirm Password',\n                                     validators=[DataRequired(), EqualTo('password')])\n    submit = SubmitField('Sign Up')\n    # validation for user already existed in database or not",
+        "detail": "flaskblog.forms",
+        "documentation": {
+            "value": "\n```python\nfrom flaskblog.forms import RegistrationForm\n```\n\n```python\n\n\n```\n\n```python\nclass RegistrationForm(FlaskForm):\n    username = StringField('Username',\n                           validators=[DataRequired(), Length(min=2, max=20)])\n    email = StringField('Email',\n                        validators=[DataRequired(), Email()])\n    password = PasswordField('Password', validators=[DataRequired()])\n    confirm_password = PasswordField('Confirm Password',\n                                     validators=[DataRequired(), EqualTo('password')])\n    submit = SubmitField('Sign Up')\n    # validation for user already existed in database or not\n```\n",
+            "supportThemeIcons": false
+        }
+    },
+    {
+        "label": "LoginForm",
+        "kind": 6,
+        "importPath": "flaskblog.forms",
+        "description": "flaskblog.forms",
+        "peekOfCode": "class LoginForm(FlaskForm):\n    email = StringField('Email',\n                        validators=[DataRequired(), Email()])\n    password = PasswordField('Password', validators=[DataRequired()])\n    remember = BooleanField('Remember Me')\n    submit = SubmitField('Login')",
+        "detail": "flaskblog.forms",
+        "documentation": {
+            "value": "\n```python\nfrom flaskblog.forms import LoginForm\n```\n\n```python\n\n\n```\n\n```python\nclass LoginForm(FlaskForm):\n    email = StringField('Email',\n                        validators=[DataRequired(), Email()])\n    password = PasswordField('Password', validators=[DataRequired()])\n    remember = BooleanField('Remember Me')\n    submit = SubmitField('Login')\n```\n",
+            "supportThemeIcons": false
+        }
+    },
+    {
+        "label": "User",
+        "kind": 6,
+        "importPath": "flaskblog.models",
+        "description": "flaskblog.models",
+        "peekOfCode": "class User(db.Model, UserMixin):\n    id = db.Column(db.Integer, primary_key=True)\n    username = db.Column(db.String(20), unique=True, nullable=False)\n    email = db.Column(db.String(120), unique=True, nullable=False)\n    image_file = db.Column(db.String(20), nullable=False,\n                           default='default.jpg')\n    password = db.Column(db.String(60), nullable=False)\n    posts = db.relationship('Post', backref='author', lazy=True)\n    def __repr__(self):\n        return f\"User('{self.username}', '{self.email}', '{self.image_file}')\"",
+        "detail": "flaskblog.models",
+        "documentation": {
+            "value": "\n```python\nfrom flaskblog.models import User\n```\n\n```python\n\n\n```\n\n```python\nclass User(db.Model, UserMixin):\n    id = db.Column(db.Integer, primary_key=True)\n    username = db.Column(db.String(20), unique=True, nullable=False)\n    email = db.Column(db.String(120), unique=True, nullable=False)\n    image_file = db.Column(db.String(20), nullable=False,\n                           default='default.jpg')\n    password = db.Column(db.String(60), nullable=False)\n    posts = db.relationship('Post', backref='author', lazy=True)\n    def __repr__(self):\n        return f\"User('{self.username}', '{self.email}', '{self.image_file}')\"\n```\n",
+            "supportThemeIcons": false
+        }
+    },
+    {
+        "label": "Post",
+        "kind": 6,
+        "importPath": "flaskblog.models",
+        "description": "flaskblog.models",
+        "peekOfCode": "class Post(db.Model):\n    id = db.Column(db.Integer, primary_key=True)\n    title = db.Column(db.String(100), nullable=False)\n    date_posted = db.Column(db.DateTime, nullable=False,\n                            default=datetime.utcnow)\n    content = db.Column(db.Text, nullable=False)\n    user_id = db.Column(db.Integer, db.ForeignKey('user.id'), nullable=False)\n    def __repr__(self):\n        return f\"Post('{self.title}', '{self.date_posted}')\"",
+        "detail": "flaskblog.models",
+        "documentation": {
+            "value": "\n```python\nfrom flaskblog.models import Post\n```\n\n```python\n\n\n```\n\n```python\nclass Post(db.Model):\n    id = db.Column(db.Integer, primary_key=True)\n    title = db.Column(db.String(100), nullable=False)\n    date_posted = db.Column(db.DateTime, nullable=False,\n                            default=datetime.utcnow)\n    content = db.Column(db.Text, nullable=False)\n    user_id = db.Column(db.Integer, db.ForeignKey('user.id'), nullable=False)\n    def __repr__(self):\n        return f\"Post('{self.title}', '{self.date_posted}')\"\n```\n",
+            "supportThemeIcons": false
+        }
+    },
+    {
+        "label": "load_user",
+        "kind": 2,
+        "importPath": "flaskblog.models",
+        "description": "flaskblog.models",
+        "peekOfCode": "def load_user(user_id):\n    return User.query.get(int(user_id))\nclass User(db.Model, UserMixin):\n    id = db.Column(db.Integer, primary_key=True)\n    username = db.Column(db.String(20), unique=True, nullable=False)\n    email = db.Column(db.String(120), unique=True, nullable=False)\n    image_file = db.Column(db.String(20), nullable=False,\n                           default='default.jpg')\n    password = db.Column(db.String(60), nullable=False)\n    posts = db.relationship('Post', backref='author', lazy=True)",
+        "detail": "flaskblog.models",
+        "documentation": {
+            "value": "\n```python\nfrom flaskblog.models import load_user\n```\n\n```python\n\n\n```\n\n```python\ndef load_user(user_id):\n    return User.query.get(int(user_id))\nclass User(db.Model, UserMixin):\n    id = db.Column(db.Integer, primary_key=True)\n    username = db.Column(db.String(20), unique=True, nullable=False)\n    email = db.Column(db.String(120), unique=True, nullable=False)\n    image_file = db.Column(db.String(20), nullable=False,\n                           default='default.jpg')\n    password = db.Column(db.String(60), nullable=False)\n    posts = db.relationship('Post', backref='author', lazy=True)\n```\n",
+            "supportThemeIcons": false
+        }
+    },
+    {
+        "label": "home",
+        "kind": 2,
+        "importPath": "flaskblog.routes",
+        "description": "flaskblog.routes",
+        "peekOfCode": "def home():\n    return render_template('home.html', posts=posts)\n@app.route(\"/about\")\ndef about():\n    return render_template('about.html', title='About')\n@app.route(\"/register\", methods=['GET', 'POST'])\ndef register():\n    if current_user.is_authenticated:\n        return redirect(url_for('home'))\n    form = RegistrationForm()",
+        "detail": "flaskblog.routes",
+        "documentation": {
+            "value": "\n```python\nfrom flaskblog.routes import home\n```\n\n```python\n\n\n```\n\n```python\ndef home():\n    return render_template('home.html', posts=posts)\n@app.route(\"/about\")\ndef about():\n    return render_template('about.html', title='About')\n@app.route(\"/register\", methods=['GET', 'POST'])\ndef register():\n    if current_user.is_authenticated:\n        return redirect(url_for('home'))\n    form = RegistrationForm()\n```\n",
+            "supportThemeIcons": false
+        }
+    },
+    {
+        "label": "about",
+        "kind": 2,
+        "importPath": "flaskblog.routes",
+        "description": "flaskblog.routes",
+        "peekOfCode": "def about():\n    return render_template('about.html', title='About')\n@app.route(\"/register\", methods=['GET', 'POST'])\ndef register():\n    if current_user.is_authenticated:\n        return redirect(url_for('home'))\n    form = RegistrationForm()\n    if form.validate_on_submit():\n        hashed_password = bcrypt.generate_password_hash(\n            form.password.data).decode('utf-8')",
+        "detail": "flaskblog.routes",
+        "documentation": {
+            "value": "\n```python\nfrom flaskblog.routes import about\n```\n\n```python\n\n\n```\n\n```python\ndef about():\n    return render_template('about.html', title='About')\n@app.route(\"/register\", methods=['GET', 'POST'])\ndef register():\n    if current_user.is_authenticated:\n        return redirect(url_for('home'))\n    form = RegistrationForm()\n    if form.validate_on_submit():\n        hashed_password = bcrypt.generate_password_hash(\n            form.password.data).decode('utf-8')\n```\n",
+            "supportThemeIcons": false
+        }
+    },
+    {
+        "label": "register",
+        "kind": 2,
+        "importPath": "flaskblog.routes",
+        "description": "flaskblog.routes",
+        "peekOfCode": "def register():\n    if current_user.is_authenticated:\n        return redirect(url_for('home'))\n    form = RegistrationForm()\n    if form.validate_on_submit():\n        hashed_password = bcrypt.generate_password_hash(\n            form.password.data).decode('utf-8')\n        user = User(username=form.username.data,\n                    email=form.email.data, password=hashed_password)\n        db.session.add(user)",
+        "detail": "flaskblog.routes",
+        "documentation": {
+            "value": "\n```python\nfrom flaskblog.routes import register\n```\n\n```python\n\n\n```\n\n```python\ndef register():\n    if current_user.is_authenticated:\n        return redirect(url_for('home'))\n    form = RegistrationForm()\n    if form.validate_on_submit():\n        hashed_password = bcrypt.generate_password_hash(\n            form.password.data).decode('utf-8')\n        user = User(username=form.username.data,\n                    email=form.email.data, password=hashed_password)\n        db.session.add(user)\n```\n",
+            "supportThemeIcons": false
+        }
+    },
+    {
+        "label": "login",
+        "kind": 2,
+        "importPath": "flaskblog.routes",
+        "description": "flaskblog.routes",
+        "peekOfCode": "def login():\n    if current_user.is_authenticated:\n        return redirect(url_for('home'))\n    form = LoginForm()\n    if form.validate_on_submit():\n        user = User.query.filter_by(email=form.email.data).first()\n        if user and bcrypt.check_password_hash(user.password, form.password.data):\n            login_user(user, remember=form.remember.data)\n            next_page = request.args.get('next')\n            return redirect(next_page) if next_page else redirect(url_for('home'))",
+        "detail": "flaskblog.routes",
+        "documentation": {
+            "value": "\n```python\nfrom flaskblog.routes import login\n```\n\n```python\n\n\n```\n\n```python\ndef login():\n    if current_user.is_authenticated:\n        return redirect(url_for('home'))\n    form = LoginForm()\n    if form.validate_on_submit():\n        user = User.query.filter_by(email=form.email.data).first()\n        if user and bcrypt.check_password_hash(user.password, form.password.data):\n            login_user(user, remember=form.remember.data)\n            next_page = request.args.get('next')\n            return redirect(next_page) if next_page else redirect(url_for('home'))\n```\n",
+            "supportThemeIcons": false
+        }
+    },
+    {
+        "label": "logout",
+        "kind": 2,
+        "importPath": "flaskblog.routes",
+        "description": "flaskblog.routes",
+        "peekOfCode": "def logout():\n    logout_user()\n    return redirect(url_for('home'))\n@app.route(\"/account\")\n@login_required\ndef account():\n    return render_template('account.html', title='Account')",
+        "detail": "flaskblog.routes",
+        "documentation": {
+            "value": "\n```python\nfrom flaskblog.routes import logout\n```\n\n```python\n\n\n```\n\n```python\ndef logout():\n    logout_user()\n    return redirect(url_for('home'))\n@app.route(\"/account\")\n@login_required\ndef account():\n    return render_template('account.html', title='Account')\n```\n",
+            "supportThemeIcons": false
+        }
+    },
+    {
+        "label": "account",
+        "kind": 2,
+        "importPath": "flaskblog.routes",
+        "description": "flaskblog.routes",
+        "peekOfCode": "def account():\n    return render_template('account.html', title='Account')",
+        "detail": "flaskblog.routes",
+        "documentation": {
+            "value": "\n```python\nfrom flaskblog.routes import account\n```\n\n```python\n\n\n```\n\n```python\ndef account():\n    return render_template('account.html', title='Account')\n```\n",
+            "supportThemeIcons": false
+        }
+    },
+    {
+        "label": "posts",
+        "kind": 5,
+        "importPath": "flaskblog.routes",
+        "description": "flaskblog.routes",
+        "peekOfCode": "posts = [\n    {\n        'author': 'Corey Schafer',\n        'title': 'Blog Post 1',\n        'content': 'First post content',\n        'date_posted': 'April 20, 2018'\n    },\n    {\n        'author': 'Jane Doe',\n        'title': 'Blog Post 2',",
+        "detail": "flaskblog.routes",
+        "documentation": {
+            "value": "\n```python\nfrom flaskblog.routes import posts\n```\n\n```python\n\n\n```\n\n```python\nposts = [\n    {\n        'author': 'Corey Schafer',\n        'title': 'Blog Post 1',\n        'content': 'First post content',\n        'date_posted': 'April 20, 2018'\n    },\n    {\n        'author': 'Jane Doe',\n        'title': 'Blog Post 2',\n```\n",
+            "supportThemeIcons": false
+        }
+    },
+    {
+        "label": "app",
+        "kind": 5,
+        "importPath": "flaskblog.__init__",
+        "description": "flaskblog.__init__",
+        "peekOfCode": "app = Flask(__name__)\napp.config['SECRET_KEY'] = '5791628bb0b13ce0c676dfde280ba245'\napp.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///site.db'\ndb = SQLAlchemy(app)\nbcrypt = Bcrypt(app)\nlogin_manager = LoginManager(app)\nlogin_manager.login_view = 'login'\nlogin_manager.login_message_category = 'info'",
+        "detail": "flaskblog.__init__",
+        "documentation": {
+            "value": "\n```python\nfrom flaskblog.__init__ import app\n```\n\n```python\n\n\n```\n\n```python\napp = Flask(__name__)\napp.config['SECRET_KEY'] = '5791628bb0b13ce0c676dfde280ba245'\napp.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///site.db'\ndb = SQLAlchemy(app)\nbcrypt = Bcrypt(app)\nlogin_manager = LoginManager(app)\nlogin_manager.login_view = 'login'\nlogin_manager.login_message_category = 'info'\n```\n",
+            "supportThemeIcons": false
+        }
+    },
+    {
+        "label": "app.config['SECRET_KEY']",
+        "kind": 5,
+        "importPath": "flaskblog.__init__",
+        "description": "flaskblog.__init__",
+        "peekOfCode": "app.config['SECRET_KEY'] = '5791628bb0b13ce0c676dfde280ba245'\napp.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///site.db'\ndb = SQLAlchemy(app)\nbcrypt = Bcrypt(app)\nlogin_manager = LoginManager(app)\nlogin_manager.login_view = 'login'\nlogin_manager.login_message_category = 'info'",
+        "detail": "flaskblog.__init__",
+        "documentation": {
+            "value": "\n```python\nfrom flaskblog.__init__ import app.config['SECRET_KEY']\n```\n\n```python\n\n\n```\n\n```python\napp.config['SECRET_KEY'] = '5791628bb0b13ce0c676dfde280ba245'\napp.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///site.db'\ndb = SQLAlchemy(app)\nbcrypt = Bcrypt(app)\nlogin_manager = LoginManager(app)\nlogin_manager.login_view = 'login'\nlogin_manager.login_message_category = 'info'\n```\n",
+            "supportThemeIcons": false
+        }
+    },
+    {
+        "label": "app.config['SQLALCHEMY_DATABASE_URI']",
+        "kind": 5,
+        "importPath": "flaskblog.__init__",
+        "description": "flaskblog.__init__",
+        "peekOfCode": "app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///site.db'\ndb = SQLAlchemy(app)\nbcrypt = Bcrypt(app)\nlogin_manager = LoginManager(app)\nlogin_manager.login_view = 'login'\nlogin_manager.login_message_category = 'info'",
+        "detail": "flaskblog.__init__",
+        "documentation": {
+            "value": "\n```python\nfrom flaskblog.__init__ import app.config['SQLALCHEMY_DATABASE_URI']\n```\n\n```python\n\n\n```\n\n```python\napp.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///site.db'\ndb = SQLAlchemy(app)\nbcrypt = Bcrypt(app)\nlogin_manager = LoginManager(app)\nlogin_manager.login_view = 'login'\nlogin_manager.login_message_category = 'info'\n```\n",
+            "supportThemeIcons": false
+        }
+    },
+    {
+        "label": "db",
+        "kind": 5,
+        "importPath": "flaskblog.__init__",
+        "description": "flaskblog.__init__",
+        "peekOfCode": "db = SQLAlchemy(app)\nbcrypt = Bcrypt(app)\nlogin_manager = LoginManager(app)\nlogin_manager.login_view = 'login'\nlogin_manager.login_message_category = 'info'",
+        "detail": "flaskblog.__init__",
+        "documentation": {
+            "value": "\n```python\nfrom flaskblog.__init__ import db\n```\n\n```python\n\n\n```\n\n```python\ndb = SQLAlchemy(app)\nbcrypt = Bcrypt(app)\nlogin_manager = LoginManager(app)\nlogin_manager.login_view = 'login'\nlogin_manager.login_message_category = 'info'\n```\n",
+            "supportThemeIcons": false
+        }
+    },
+    {
+        "label": "bcrypt",
+        "kind": 5,
+        "importPath": "flaskblog.__init__",
+        "description": "flaskblog.__init__",
+        "peekOfCode": "bcrypt = Bcrypt(app)\nlogin_manager = LoginManager(app)\nlogin_manager.login_view = 'login'\nlogin_manager.login_message_category = 'info'",
+        "detail": "flaskblog.__init__",
+        "documentation": {
+            "value": "\n```python\nfrom flaskblog.__init__ import bcrypt\n```\n\n```python\n\n\n```\n\n```python\nbcrypt = Bcrypt(app)\nlogin_manager = LoginManager(app)\nlogin_manager.login_view = 'login'\nlogin_manager.login_message_category = 'info'\n```\n",
+            "supportThemeIcons": false
+        }
+    },
+    {
+        "label": "login_manager",
+        "kind": 5,
+        "importPath": "flaskblog.__init__",
+        "description": "flaskblog.__init__",
+        "peekOfCode": "login_manager = LoginManager(app)\nlogin_manager.login_view = 'login'\nlogin_manager.login_message_category = 'info'",
+        "detail": "flaskblog.__init__",
+        "documentation": {
+            "value": "\n```python\nfrom flaskblog.__init__ import login_manager\n```\n\n```python\n\n\n```\n\n```python\nlogin_manager = LoginManager(app)\nlogin_manager.login_view = 'login'\nlogin_manager.login_message_category = 'info'\n```\n",
+            "supportThemeIcons": false
+        }
+    },
+    {
+        "label": "login_manager.login_view",
+        "kind": 5,
+        "importPath": "flaskblog.__init__",
+        "description": "flaskblog.__init__",
+        "peekOfCode": "login_manager.login_view = 'login'\nlogin_manager.login_message_category = 'info'",
+        "detail": "flaskblog.__init__",
+        "documentation": {
+            "value": "\n```python\nfrom flaskblog.__init__ import login_manager.login_view\n```\n\n```python\n\n\n```\n\n```python\nlogin_manager.login_view = 'login'\nlogin_manager.login_message_category = 'info'\n```\n",
+            "supportThemeIcons": false
+        }
+    },
+    {
+        "label": "login_manager.login_message_category",
+        "kind": 5,
+        "importPath": "flaskblog.__init__",
+        "description": "flaskblog.__init__",
+        "peekOfCode": "login_manager.login_message_category = 'info'",
+        "detail": "flaskblog.__init__",
+        "documentation": {
+            "value": "\n```python\nfrom flaskblog.__init__ import login_manager.login_message_category\n```\n\n```python\n\n\n```\n\n```python\nlogin_manager.login_message_category = 'info'\n```\n",
+            "supportThemeIcons": false
+        }
+    }
+]
