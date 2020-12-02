@@ -1,7 +1,11 @@
+import os
+from PIL import Image
+
+import secrets
 from flask import render_template, url_for, flash, redirect, request
 from flask_login.utils import login_required, login_user, current_user, logout_user
 from flaskblog import app, db, bcrypt
-from flaskblog.forms import RegistrationForm, LoginForm
+from flaskblog.forms import RegistrationForm, LoginForm, UpdateAccountForm
 from flaskblog.models import User, Post
 
 posts = [
@@ -54,7 +58,7 @@ def login():
     if current_user.is_authenticated:
         return redirect(url_for('home'))
     form = LoginForm()
-    if form.validate_on_submit():
+    if form.validate_on_submit():  # forms ke validations check kr deta hai
         user = User.query.filter_by(email=form.email.data).first()
         if user and bcrypt.check_password_hash(user.password, form.password.data):
             login_user(user, remember=form.remember.data)
@@ -72,7 +76,40 @@ def logout():
     return redirect(url_for('home'))
 
 
-@app.route('/account')
+def save_picture(form_picture):
+    # to avoid collision of the images...we convert it into image name random hex value
+    random_hex = secrets.token_hex(8)
+    _, f_ext = os.path.splitext(form_picture.filename)
+    # form_picture.filename--> xyz.jpg asel tr fname madhe xyz ani f_ext madhe jpg store hote
+    picture_fn = random_hex+f_ext  # ata image ch nav randomvalue.jpg hooin
+    picture_path = os.path.join(
+        app.root_path, 'static/profile_pics', picture_fn)
+    # app.route.path--> aplya app directory madhe cursor yete ,tyanntr static/profile_pics tyapudhe attach hote ani nntr picture_fn(apli profile pic ji apan update karat ahot ti) tyala attach hote
+    output_size = (125, 125)  # image_resize size
+    i = Image.open(form_picture) #from pillow package
+    i.thumbnail(output_size)
+    i.save(picture_path)
+    return picture_fn
+
+
+@app.route('/account', methods=['GET', 'POST'])
 @login_required
 def account():
-    return render_template('account.html', title='account')
+    accountform = UpdateAccountForm()
+    if accountform.validate_on_submit():
+        if accountform.picture.data:
+            picture_file = save_picture(accountform.picture.data)
+            current_user.image_file = picture_file
+        current_user.username = accountform.username.data
+        current_user.email = accountform.email.data
+        db.session.commit()
+        flash('your account has been updated successfully', 'success')
+        return redirect(url_for('account'))
+
+    elif request.method == 'GET':
+        accountform.username.data = current_user.username
+        accountform.email.data = current_user.email
+
+    image_file = url_for(
+        'static', filename='profile_pics/'+current_user.image_file)
+    return render_template('account.html', title='account', image_file=image_file, form=accountform)

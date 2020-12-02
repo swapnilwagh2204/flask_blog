@@ -1,5 +1,27 @@
 [
     {
+        "label": "current_user",
+        "importPath": "flask_login",
+        "description": "flask_login",
+        "isExtraImport": true,
+        "detail": "flask_login",
+        "documentation": {
+            "value": "\n```python\nimport flask_login\n```\n",
+            "supportThemeIcons": false
+        }
+    },
+    {
+        "label": "UserMixin",
+        "importPath": "flask_login",
+        "description": "flask_login",
+        "isExtraImport": true,
+        "detail": "flask_login",
+        "documentation": {
+            "value": "\n```python\nimport flask_login\n```\n",
+            "supportThemeIcons": false
+        }
+    },
+    {
         "label": "FlaskForm",
         "importPath": "flask_wtf",
         "description": "flask_wtf",
@@ -51,6 +73,28 @@
         "detail": "wtforms",
         "documentation": {
             "value": "\n```python\nimport wtforms\n```\n",
+            "supportThemeIcons": false
+        }
+    },
+    {
+        "label": "FileField",
+        "importPath": "flask_wtf.file",
+        "description": "flask_wtf.file",
+        "isExtraImport": true,
+        "detail": "flask_wtf.file",
+        "documentation": {
+            "value": "\n```python\nimport flask_wtf.file\n```\n",
+            "supportThemeIcons": false
+        }
+    },
+    {
+        "label": "FileAllowed",
+        "importPath": "flask_wtf.file",
+        "description": "flask_wtf.file",
+        "isExtraImport": true,
+        "detail": "flask_wtf.file",
+        "documentation": {
+            "value": "\n```python\nimport flask_wtf.file\n```\n",
             "supportThemeIcons": false
         }
     },
@@ -231,13 +275,37 @@
         }
     },
     {
-        "label": "UserMixin",
-        "importPath": "flask_login",
-        "description": "flask_login",
+        "label": "os",
+        "kind": 6,
         "isExtraImport": true,
-        "detail": "flask_login",
+        "importPath": "os",
+        "description": "os",
+        "detail": "os",
         "documentation": {
-            "value": "\n```python\nimport flask_login\n```\n",
+            "value": "\n```python\nimport os\n```\n",
+            "supportThemeIcons": false
+        }
+    },
+    {
+        "label": "Image",
+        "importPath": "PIL",
+        "description": "PIL",
+        "isExtraImport": true,
+        "detail": "PIL",
+        "documentation": {
+            "value": "\n```python\nimport PIL\n```\n",
+            "supportThemeIcons": false
+        }
+    },
+    {
+        "label": "secrets",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "secrets",
+        "description": "secrets",
+        "detail": "secrets",
+        "documentation": {
+            "value": "\n```python\nimport secrets\n```\n",
             "supportThemeIcons": false
         }
     },
@@ -374,6 +442,17 @@
         }
     },
     {
+        "label": "UpdateAccountForm",
+        "importPath": "flaskblog.forms",
+        "description": "flaskblog.forms",
+        "isExtraImport": true,
+        "detail": "flaskblog.forms",
+        "documentation": {
+            "value": "\n```python\nimport flaskblog.forms\n```\n",
+            "supportThemeIcons": false
+        }
+    },
+    {
         "label": "LoginManager",
         "importPath": "flask_login.login_manager",
         "description": "flask_login.login_manager",
@@ -423,10 +502,22 @@
         "kind": 6,
         "importPath": "flaskblog.forms",
         "description": "flaskblog.forms",
-        "peekOfCode": "class LoginForm(FlaskForm):\n    email = StringField('Email',\n                        validators=[DataRequired(), Email()])\n    password = PasswordField('Password', validators=[DataRequired()])\n    remember = BooleanField('Remember Me')\n    submit = SubmitField('Login')",
+        "peekOfCode": "class LoginForm(FlaskForm):\n    email = StringField('Email',\n                        validators=[DataRequired(), Email()])\n    password = PasswordField('Password', validators=[DataRequired()])\n    remember = BooleanField('Remember Me')\n    submit = SubmitField('Login')\nclass UpdateAccountForm(FlaskForm):\n    username = StringField('Username',\n                           validators=[DataRequired(), Length(min=2, max=20)])\n    email = StringField('Email',",
         "detail": "flaskblog.forms",
         "documentation": {
-            "value": "\n```python\nfrom flaskblog.forms import LoginForm\n```\n\n```python\n\n\n```\n\n```python\nclass LoginForm(FlaskForm):\n    email = StringField('Email',\n                        validators=[DataRequired(), Email()])\n    password = PasswordField('Password', validators=[DataRequired()])\n    remember = BooleanField('Remember Me')\n    submit = SubmitField('Login')\n```\n",
+            "value": "\n```python\nfrom flaskblog.forms import LoginForm\n```\n\n```python\n\n\n```\n\n```python\nclass LoginForm(FlaskForm):\n    email = StringField('Email',\n                        validators=[DataRequired(), Email()])\n    password = PasswordField('Password', validators=[DataRequired()])\n    remember = BooleanField('Remember Me')\n    submit = SubmitField('Login')\nclass UpdateAccountForm(FlaskForm):\n    username = StringField('Username',\n                           validators=[DataRequired(), Length(min=2, max=20)])\n    email = StringField('Email',\n```\n",
+            "supportThemeIcons": false
+        }
+    },
+    {
+        "label": "UpdateAccountForm",
+        "kind": 6,
+        "importPath": "flaskblog.forms",
+        "description": "flaskblog.forms",
+        "peekOfCode": "class UpdateAccountForm(FlaskForm):\n    username = StringField('Username',\n                           validators=[DataRequired(), Length(min=2, max=20)])\n    email = StringField('Email',\n                        validators=[DataRequired(), Email()])\n    picture = FileField('Update profile pic', validators=[\n                        FileAllowed(['jpg', 'png'])])\n    submit = SubmitField('update')\n    def validate_username(self, username):\n        if username.data != current_user.username:",
+        "detail": "flaskblog.forms",
+        "documentation": {
+            "value": "\n```python\nfrom flaskblog.forms import UpdateAccountForm\n```\n\n```python\n\n\n```\n\n```python\nclass UpdateAccountForm(FlaskForm):\n    username = StringField('Username',\n                           validators=[DataRequired(), Length(min=2, max=20)])\n    email = StringField('Email',\n                        validators=[DataRequired(), Email()])\n    picture = FileField('Update profile pic', validators=[\n                        FileAllowed(['jpg', 'png'])])\n    submit = SubmitField('update')\n    def validate_username(self, username):\n        if username.data != current_user.username:\n```\n",
             "supportThemeIcons": false
         }
     },
@@ -435,10 +526,10 @@
         "kind": 6,
         "importPath": "flaskblog.models",
         "description": "flaskblog.models",
-        "peekOfCode": "class User(db.Model, UserMixin):\n    id = db.Column(db.Integer, primary_key=True)\n    username = db.Column(db.String(20), unique=True, nullable=False)\n    email = db.Column(db.String(120), unique=True, nullable=False)\n    image_file = db.Column(db.String(20), nullable=False,\n                           default='default.jpg')\n    password = db.Column(db.String(60), nullable=False)\n    posts = db.relationship('Post', backref='author', lazy=True)\n    def __repr__(self):\n        return f\"User('{self.username}', '{self.email}', '{self.image_file}')\"",
+        "peekOfCode": "class User(db.Model, UserMixin):\n    id = db.Column(db.Integer, primary_key=True)\n    username = db.Column(db.String(20), unique=True, nullable=False)\n    email = db.Column(db.String(120), unique=True, nullable=False)\n    image_file = db.Column(db.String(20), nullable=False,\n                           default='default.jpg')\n    password = db.Column(db.String(60), nullable=False)\n    posts = db.relationship('Post', backref='author', lazy=True)\n    def __str__(self):\n        return f\"User('{self.username}', '{self.email}', '{self.image_file}')\"",
         "detail": "flaskblog.models",
         "documentation": {
-            "value": "\n```python\nfrom flaskblog.models import User\n```\n\n```python\n\n\n```\n\n```python\nclass User(db.Model, UserMixin):\n    id = db.Column(db.Integer, primary_key=True)\n    username = db.Column(db.String(20), unique=True, nullable=False)\n    email = db.Column(db.String(120), unique=True, nullable=False)\n    image_file = db.Column(db.String(20), nullable=False,\n                           default='default.jpg')\n    password = db.Column(db.String(60), nullable=False)\n    posts = db.relationship('Post', backref='author', lazy=True)\n    def __repr__(self):\n        return f\"User('{self.username}', '{self.email}', '{self.image_file}')\"\n```\n",
+            "value": "\n```python\nfrom flaskblog.models import User\n```\n\n```python\n\n\n```\n\n```python\nclass User(db.Model, UserMixin):\n    id = db.Column(db.Integer, primary_key=True)\n    username = db.Column(db.String(20), unique=True, nullable=False)\n    email = db.Column(db.String(120), unique=True, nullable=False)\n    image_file = db.Column(db.String(20), nullable=False,\n                           default='default.jpg')\n    password = db.Column(db.String(60), nullable=False)\n    posts = db.relationship('Post', backref='author', lazy=True)\n    def __str__(self):\n        return f\"User('{self.username}', '{self.email}', '{self.image_file}')\"\n```\n",
             "supportThemeIcons": false
         }
     },
@@ -447,10 +538,10 @@
         "kind": 6,
         "importPath": "flaskblog.models",
         "description": "flaskblog.models",
-        "peekOfCode": "class Post(db.Model):\n    id = db.Column(db.Integer, primary_key=True)\n    title = db.Column(db.String(100), nullable=False)\n    date_posted = db.Column(db.DateTime, nullable=False,\n                            default=datetime.utcnow)\n    content = db.Column(db.Text, nullable=False)\n    user_id = db.Column(db.Integer, db.ForeignKey('user.id'), nullable=False)\n    def __repr__(self):\n        return f\"Post('{self.title}', '{self.date_posted}')\"",
+        "peekOfCode": "class Post(db.Model):\n    id = db.Column(db.Integer, primary_key=True)\n    title = db.Column(db.String(100), nullable=False)\n    date_posted = db.Column(db.DateTime, nullable=False,\n                            default=datetime.utcnow)\n    content = db.Column(db.Text, nullable=False)\n    user_id = db.Column(db.Integer, db.ForeignKey('user.id'), nullable=False)\n    def __str__(self):\n        return f\"Post('{self.title}', '{self.date_posted}')\"",
         "detail": "flaskblog.models",
         "documentation": {
-            "value": "\n```python\nfrom flaskblog.models import Post\n```\n\n```python\n\n\n```\n\n```python\nclass Post(db.Model):\n    id = db.Column(db.Integer, primary_key=True)\n    title = db.Column(db.String(100), nullable=False)\n    date_posted = db.Column(db.DateTime, nullable=False,\n                            default=datetime.utcnow)\n    content = db.Column(db.Text, nullable=False)\n    user_id = db.Column(db.Integer, db.ForeignKey('user.id'), nullable=False)\n    def __repr__(self):\n        return f\"Post('{self.title}', '{self.date_posted}')\"\n```\n",
+            "value": "\n```python\nfrom flaskblog.models import Post\n```\n\n```python\n\n\n```\n\n```python\nclass Post(db.Model):\n    id = db.Column(db.Integer, primary_key=True)\n    title = db.Column(db.String(100), nullable=False)\n    date_posted = db.Column(db.DateTime, nullable=False,\n                            default=datetime.utcnow)\n    content = db.Column(db.Text, nullable=False)\n    user_id = db.Column(db.Integer, db.ForeignKey('user.id'), nullable=False)\n    def __str__(self):\n        return f\"Post('{self.title}', '{self.date_posted}')\"\n```\n",
             "supportThemeIcons": false
         }
     },
@@ -507,10 +598,10 @@
         "kind": 2,
         "importPath": "flaskblog.routes",
         "description": "flaskblog.routes",
-        "peekOfCode": "def login():\n    if current_user.is_authenticated:\n        return redirect(url_for('home'))\n    form = LoginForm()\n    if form.validate_on_submit():\n        user = User.query.filter_by(email=form.email.data).first()\n        if user and bcrypt.check_password_hash(user.password, form.password.data):\n            login_user(user, remember=form.remember.data)\n            next_page = request.args.get('next')\n            # ternary condition",
+        "peekOfCode": "def login():\n    if current_user.is_authenticated:\n        return redirect(url_for('home'))\n    form = LoginForm()\n    if form.validate_on_submit():  # forms ke validations check kr deta hai\n        user = User.query.filter_by(email=form.email.data).first()\n        if user and bcrypt.check_password_hash(user.password, form.password.data):\n            login_user(user, remember=form.remember.data)\n            next_page = request.args.get('next')\n            # ternary condition",
         "detail": "flaskblog.routes",
         "documentation": {
-            "value": "\n```python\nfrom flaskblog.routes import login\n```\n\n```python\n\n\n```\n\n```python\ndef login():\n    if current_user.is_authenticated:\n        return redirect(url_for('home'))\n    form = LoginForm()\n    if form.validate_on_submit():\n        user = User.query.filter_by(email=form.email.data).first()\n        if user and bcrypt.check_password_hash(user.password, form.password.data):\n            login_user(user, remember=form.remember.data)\n            next_page = request.args.get('next')\n            # ternary condition\n```\n",
+            "value": "\n```python\nfrom flaskblog.routes import login\n```\n\n```python\n\n\n```\n\n```python\ndef login():\n    if current_user.is_authenticated:\n        return redirect(url_for('home'))\n    form = LoginForm()\n    if form.validate_on_submit():  # forms ke validations check kr deta hai\n        user = User.query.filter_by(email=form.email.data).first()\n        if user and bcrypt.check_password_hash(user.password, form.password.data):\n            login_user(user, remember=form.remember.data)\n            next_page = request.args.get('next')\n            # ternary condition\n```\n",
             "supportThemeIcons": false
         }
     },
@@ -519,10 +610,22 @@
         "kind": 2,
         "importPath": "flaskblog.routes",
         "description": "flaskblog.routes",
-        "peekOfCode": "def logout():\n    logout_user()\n    return redirect(url_for('home'))\n@app.route('/account')\n@login_required\ndef account():\n    return render_template('account.html', title='account')",
+        "peekOfCode": "def logout():\n    logout_user()\n    return redirect(url_for('home'))\ndef save_picture(form_picture):\n    # to avoid collision of the images...we convert it into image name random hex value\n    random_hex = secrets.token_hex(8)\n    _, f_ext = os.path.splitext(form_picture.filename)\n    # form_picture.filename--> xyz.jpg asel tr fname madhe xyz ani f_ext madhe jpg store hote\n    picture_fn = random_hex+f_ext  # ata image ch nav randomvalue.jpg hooin\n    picture_path = os.path.join(",
         "detail": "flaskblog.routes",
         "documentation": {
-            "value": "\n```python\nfrom flaskblog.routes import logout\n```\n\n```python\n\n\n```\n\n```python\ndef logout():\n    logout_user()\n    return redirect(url_for('home'))\n@app.route('/account')\n@login_required\ndef account():\n    return render_template('account.html', title='account')\n```\n",
+            "value": "\n```python\nfrom flaskblog.routes import logout\n```\n\n```python\n\n\n```\n\n```python\ndef logout():\n    logout_user()\n    return redirect(url_for('home'))\ndef save_picture(form_picture):\n    # to avoid collision of the images...we convert it into image name random hex value\n    random_hex = secrets.token_hex(8)\n    _, f_ext = os.path.splitext(form_picture.filename)\n    # form_picture.filename--> xyz.jpg asel tr fname madhe xyz ani f_ext madhe jpg store hote\n    picture_fn = random_hex+f_ext  # ata image ch nav randomvalue.jpg hooin\n    picture_path = os.path.join(\n```\n",
+            "supportThemeIcons": false
+        }
+    },
+    {
+        "label": "save_picture",
+        "kind": 2,
+        "importPath": "flaskblog.routes",
+        "description": "flaskblog.routes",
+        "peekOfCode": "def save_picture(form_picture):\n    # to avoid collision of the images...we convert it into image name random hex value\n    random_hex = secrets.token_hex(8)\n    _, f_ext = os.path.splitext(form_picture.filename)\n    # form_picture.filename--> xyz.jpg asel tr fname madhe xyz ani f_ext madhe jpg store hote\n    picture_fn = random_hex+f_ext  # ata image ch nav randomvalue.jpg hooin\n    picture_path = os.path.join(\n        app.root_path, 'static/profile_pics', picture_fn)\n    # app.route.path--> aplya app directory madhe cursor yete ,tyanntr static/profile_pics tyapudhe attach hote ani nntr picture_fn(apli profile pic ji apan update karat ahot ti) tyala attach hote\n    output_size = (125, 125)  # image_resize size",
+        "detail": "flaskblog.routes",
+        "documentation": {
+            "value": "\n```python\nfrom flaskblog.routes import save_picture\n```\n\n```python\n\n\n```\n\n```python\ndef save_picture(form_picture):\n    # to avoid collision of the images...we convert it into image name random hex value\n    random_hex = secrets.token_hex(8)\n    _, f_ext = os.path.splitext(form_picture.filename)\n    # form_picture.filename--> xyz.jpg asel tr fname madhe xyz ani f_ext madhe jpg store hote\n    picture_fn = random_hex+f_ext  # ata image ch nav randomvalue.jpg hooin\n    picture_path = os.path.join(\n        app.root_path, 'static/profile_pics', picture_fn)\n    # app.route.path--> aplya app directory madhe cursor yete ,tyanntr static/profile_pics tyapudhe attach hote ani nntr picture_fn(apli profile pic ji apan update karat ahot ti) tyala attach hote\n    output_size = (125, 125)  # image_resize size\n```\n",
             "supportThemeIcons": false
         }
     },
@@ -531,10 +634,10 @@
         "kind": 2,
         "importPath": "flaskblog.routes",
         "description": "flaskblog.routes",
-        "peekOfCode": "def account():\n    return render_template('account.html', title='account')",
+        "peekOfCode": "def account():\n    accountform = UpdateAccountForm()\n    if accountform.validate_on_submit():\n        if accountform.picture.data:\n            picture_file = save_picture(accountform.picture.data)\n            current_user.image_file = picture_file\n        current_user.username = accountform.username.data\n        current_user.email = accountform.email.data\n        db.session.commit()\n        flash('your account has been updated successfully', 'success')",
         "detail": "flaskblog.routes",
         "documentation": {
-            "value": "\n```python\nfrom flaskblog.routes import account\n```\n\n```python\n\n\n```\n\n```python\ndef account():\n    return render_template('account.html', title='account')\n```\n",
+            "value": "\n```python\nfrom flaskblog.routes import account\n```\n\n```python\n\n\n```\n\n```python\ndef account():\n    accountform = UpdateAccountForm()\n    if accountform.validate_on_submit():\n        if accountform.picture.data:\n            picture_file = save_picture(accountform.picture.data)\n            current_user.image_file = picture_file\n        current_user.username = accountform.username.data\n        current_user.email = accountform.email.data\n        db.session.commit()\n        flash('your account has been updated successfully', 'success')\n```\n",
             "supportThemeIcons": false
         }
     },
