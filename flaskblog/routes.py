@@ -2,31 +2,32 @@ import os
 from PIL import Image
 
 import secrets
-from flask import render_template, url_for, flash, redirect, request
+from flask import render_template, url_for, flash, redirect, request, abort
 from flask_login.utils import login_required, login_user, current_user, logout_user
 from flaskblog import app, db, bcrypt
-from flaskblog.forms import RegistrationForm, LoginForm, UpdateAccountForm
+from flaskblog.forms import PostForm, RegistrationForm, LoginForm, UpdateAccountForm
 from flaskblog.models import User, Post
 
-posts = [
-    {
-        'author': 'Corey Schafer',
-        'title': 'Blog Post 1',
-        'content': 'First post content',
-        'date_posted': 'April 20, 2018'
-    },
-    {
-        'author': 'Jane Doe',
-        'title': 'Blog Post 2',
-        'content': 'Second post content',
-        'date_posted': 'April 21, 2018'
-    }
-]
+# posts = [
+#     {
+#         'author': 'Corey Schafer',
+#         'title': 'Blog Post 1',
+#         'content': 'First post content',
+#         'date_posted': 'April 20, 2018'
+#     },
+#     {
+#         'author': 'Jane Doe',
+#         'title': 'Blog Post 2',
+#         'content': 'Second post content',
+#         'date_posted': 'April 21, 2018'
+#     }
+# ]
 
 
 @app.route("/")
 @app.route("/home")
 def home():
+    posts = Post.query.all()
     return render_template('home.html', posts=posts)
 
 
@@ -86,7 +87,7 @@ def save_picture(form_picture):
         app.root_path, 'static/profile_pics', picture_fn)
     # app.route.path--> aplya app directory madhe cursor yete ,tyanntr static/profile_pics tyapudhe attach hote ani nntr picture_fn(apli profile pic ji apan update karat ahot ti) tyala attach hote
     output_size = (125, 125)  # image_resize size
-    i = Image.open(form_picture) #from pillow package
+    i = Image.open(form_picture)  # from pillow package
     i.thumbnail(output_size)
     i.save(picture_path)
     return picture_fn
@@ -113,3 +114,55 @@ def account():
     image_file = url_for(
         'static', filename='profile_pics/'+current_user.image_file)
     return render_template('account.html', title='account', image_file=image_file, form=accountform)
+
+
+@app.route('/post/new', methods=['GET', 'POST'])
+@login_required
+def new_post():
+
+    form = PostForm()
+    if form.validate_on_submit():
+        post = Post(title=form.title.data,
+                    content=form.content.data, author=current_user)
+        db.session.add(post)
+        db.session.commit()
+        flash('your post has been created!', 'success')
+        return redirect(url_for('home'))
+    return render_template('create_post.html', title='new_post', form=form, legend='new_post')
+
+
+@app.route('/post/<int:post_id>')
+def post(post_id):
+    post = Post.query.get_or_404(post_id)
+    return render_template('post.html', title=post.title, post=post)
+
+
+@app.route('/post/<int:post_id>/update', methods=['GET', 'POST'])
+@login_required
+def update_post(post_id):
+    post = Post.query.get_or_404(post_id)
+    if post.author != current_user:
+        abort(403)
+    form = PostForm()
+    if form.validate_on_submit():
+        post.title = form.title.data
+        post.content = form.content.data
+        db.session.commit()
+        flash('your post has been updated', 'success')
+        return redirect(url_for('post', post_id=post.id))
+    elif request.method == 'GET':
+        form.title.data = post.title
+        form.content.data = post.content
+    return render_template('create_post.html', title='update post', form=form, legend='update post')
+
+
+@app.route('/post/<int:post_id>/delete', methods=['GET', 'POST'])
+@login_required
+def delete_post(post_id):
+    post = Post.query.get_or_404(post_id)
+    if post.author != current_user:
+        abort(403)
+    db.session.delete(post)
+    db.session.commit()
+    flash('your post has been deleted', 'success')
+    return redirect(url_for('home'))

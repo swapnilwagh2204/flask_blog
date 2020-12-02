@@ -99,6 +99,17 @@
         }
     },
     {
+        "label": "TextAreaField",
+        "importPath": "wtforms.fields.simple",
+        "description": "wtforms.fields.simple",
+        "isExtraImport": true,
+        "detail": "wtforms.fields.simple",
+        "documentation": {
+            "value": "\n```python\nimport wtforms.fields.simple\n```\n",
+            "supportThemeIcons": false
+        }
+    },
+    {
         "label": "DataRequired",
         "importPath": "wtforms.validators",
         "description": "wtforms.validators",
@@ -365,6 +376,17 @@
         }
     },
     {
+        "label": "abort",
+        "importPath": "flask",
+        "description": "flask",
+        "isExtraImport": true,
+        "detail": "flask",
+        "documentation": {
+            "value": "\n```python\nimport flask\n```\n",
+            "supportThemeIcons": false
+        }
+    },
+    {
         "label": "Flask",
         "importPath": "flask",
         "description": "flask",
@@ -416,6 +438,17 @@
         "detail": "flask_login.utils",
         "documentation": {
             "value": "\n```python\nimport flask_login.utils\n```\n",
+            "supportThemeIcons": false
+        }
+    },
+    {
+        "label": "PostForm",
+        "importPath": "flaskblog.forms",
+        "description": "flaskblog.forms",
+        "isExtraImport": true,
+        "detail": "flaskblog.forms",
+        "documentation": {
+            "value": "\n```python\nimport flaskblog.forms\n```\n",
             "supportThemeIcons": false
         }
     },
@@ -522,6 +555,18 @@
         }
     },
     {
+        "label": "PostForm",
+        "kind": 6,
+        "importPath": "flaskblog.forms",
+        "description": "flaskblog.forms",
+        "peekOfCode": "class PostForm(FlaskForm):\n    title = StringField('title', validators=[DataRequired()])\n    content = TextAreaField('content', validators=[DataRequired()])\n    submit = SubmitField('post')",
+        "detail": "flaskblog.forms",
+        "documentation": {
+            "value": "\n```python\nfrom flaskblog.forms import PostForm\n```\n\n```python\n\n\n```\n\n```python\nclass PostForm(FlaskForm):\n    title = StringField('title', validators=[DataRequired()])\n    content = TextAreaField('content', validators=[DataRequired()])\n    submit = SubmitField('post')\n```\n",
+            "supportThemeIcons": false
+        }
+    },
+    {
         "label": "User",
         "kind": 6,
         "importPath": "flaskblog.models",
@@ -562,10 +607,10 @@
         "kind": 2,
         "importPath": "flaskblog.routes",
         "description": "flaskblog.routes",
-        "peekOfCode": "def home():\n    return render_template('home.html', posts=posts)\n@app.route(\"/about\")\ndef about():\n    return render_template('about.html', title='About')\n@app.route(\"/register\", methods=['GET', 'POST'])\ndef register():\n    if current_user.is_authenticated:\n        return redirect(url_for('home'))\n    form = RegistrationForm()",
+        "peekOfCode": "def home():\n    posts = Post.query.all()\n    return render_template('home.html', posts=posts)\n@app.route(\"/about\")\ndef about():\n    return render_template('about.html', title='About')\n@app.route(\"/register\", methods=['GET', 'POST'])\ndef register():\n    if current_user.is_authenticated:\n        return redirect(url_for('home'))",
         "detail": "flaskblog.routes",
         "documentation": {
-            "value": "\n```python\nfrom flaskblog.routes import home\n```\n\n```python\n\n\n```\n\n```python\ndef home():\n    return render_template('home.html', posts=posts)\n@app.route(\"/about\")\ndef about():\n    return render_template('about.html', title='About')\n@app.route(\"/register\", methods=['GET', 'POST'])\ndef register():\n    if current_user.is_authenticated:\n        return redirect(url_for('home'))\n    form = RegistrationForm()\n```\n",
+            "value": "\n```python\nfrom flaskblog.routes import home\n```\n\n```python\n\n\n```\n\n```python\ndef home():\n    posts = Post.query.all()\n    return render_template('home.html', posts=posts)\n@app.route(\"/about\")\ndef about():\n    return render_template('about.html', title='About')\n@app.route(\"/register\", methods=['GET', 'POST'])\ndef register():\n    if current_user.is_authenticated:\n        return redirect(url_for('home'))\n```\n",
             "supportThemeIcons": false
         }
     },
@@ -642,14 +687,50 @@
         }
     },
     {
-        "label": "posts",
-        "kind": 5,
+        "label": "new_post",
+        "kind": 2,
         "importPath": "flaskblog.routes",
         "description": "flaskblog.routes",
-        "peekOfCode": "posts = [\n    {\n        'author': 'Corey Schafer',\n        'title': 'Blog Post 1',\n        'content': 'First post content',\n        'date_posted': 'April 20, 2018'\n    },\n    {\n        'author': 'Jane Doe',\n        'title': 'Blog Post 2',",
+        "peekOfCode": "def new_post():\n    form = PostForm()\n    if form.validate_on_submit():\n        post = Post(title=form.title.data,\n                    content=form.content.data, author=current_user)\n        db.session.add(post)\n        db.session.commit()\n        flash('your post has been created!', 'success')\n        return redirect(url_for('home'))\n    return render_template('create_post.html', title='new_post', form=form, legend='new_post')",
         "detail": "flaskblog.routes",
         "documentation": {
-            "value": "\n```python\nfrom flaskblog.routes import posts\n```\n\n```python\n\n\n```\n\n```python\nposts = [\n    {\n        'author': 'Corey Schafer',\n        'title': 'Blog Post 1',\n        'content': 'First post content',\n        'date_posted': 'April 20, 2018'\n    },\n    {\n        'author': 'Jane Doe',\n        'title': 'Blog Post 2',\n```\n",
+            "value": "\n```python\nfrom flaskblog.routes import new_post\n```\n\n```python\n\n\n```\n\n```python\ndef new_post():\n    form = PostForm()\n    if form.validate_on_submit():\n        post = Post(title=form.title.data,\n                    content=form.content.data, author=current_user)\n        db.session.add(post)\n        db.session.commit()\n        flash('your post has been created!', 'success')\n        return redirect(url_for('home'))\n    return render_template('create_post.html', title='new_post', form=form, legend='new_post')\n```\n",
+            "supportThemeIcons": false
+        }
+    },
+    {
+        "label": "post",
+        "kind": 2,
+        "importPath": "flaskblog.routes",
+        "description": "flaskblog.routes",
+        "peekOfCode": "def post(post_id):\n    post = Post.query.get_or_404(post_id)\n    return render_template('post.html', title=post.title, post=post)\n@app.route('/post/<int:post_id>/update', methods=['GET', 'POST'])\n@login_required\ndef update_post(post_id):\n    post = Post.query.get_or_404(post_id)\n    if post.author != current_user:\n        abort(403)\n    form = PostForm()",
+        "detail": "flaskblog.routes",
+        "documentation": {
+            "value": "\n```python\nfrom flaskblog.routes import post\n```\n\n```python\n\n\n```\n\n```python\ndef post(post_id):\n    post = Post.query.get_or_404(post_id)\n    return render_template('post.html', title=post.title, post=post)\n@app.route('/post/<int:post_id>/update', methods=['GET', 'POST'])\n@login_required\ndef update_post(post_id):\n    post = Post.query.get_or_404(post_id)\n    if post.author != current_user:\n        abort(403)\n    form = PostForm()\n```\n",
+            "supportThemeIcons": false
+        }
+    },
+    {
+        "label": "update_post",
+        "kind": 2,
+        "importPath": "flaskblog.routes",
+        "description": "flaskblog.routes",
+        "peekOfCode": "def update_post(post_id):\n    post = Post.query.get_or_404(post_id)\n    if post.author != current_user:\n        abort(403)\n    form = PostForm()\n    if form.validate_on_submit():\n        post.title = form.title.data\n        post.content = form.content.data\n        db.session.commit()\n        flash('your post has been updated', 'success')",
+        "detail": "flaskblog.routes",
+        "documentation": {
+            "value": "\n```python\nfrom flaskblog.routes import update_post\n```\n\n```python\n\n\n```\n\n```python\ndef update_post(post_id):\n    post = Post.query.get_or_404(post_id)\n    if post.author != current_user:\n        abort(403)\n    form = PostForm()\n    if form.validate_on_submit():\n        post.title = form.title.data\n        post.content = form.content.data\n        db.session.commit()\n        flash('your post has been updated', 'success')\n```\n",
+            "supportThemeIcons": false
+        }
+    },
+    {
+        "label": "delete_post",
+        "kind": 2,
+        "importPath": "flaskblog.routes",
+        "description": "flaskblog.routes",
+        "peekOfCode": "def delete_post(post_id):\n    post = Post.query.get_or_404(post_id)\n    if post.author != current_user:\n        abort(403)\n    db.session.delete(post)\n    db.session.commit()\n    flash('your post has been deleted', 'success')\n    return redirect(url_for('home'))",
+        "detail": "flaskblog.routes",
+        "documentation": {
+            "value": "\n```python\nfrom flaskblog.routes import delete_post\n```\n\n```python\n\n\n```\n\n```python\ndef delete_post(post_id):\n    post = Post.query.get_or_404(post_id)\n    if post.author != current_user:\n        abort(403)\n    db.session.delete(post)\n    db.session.commit()\n    flash('your post has been deleted', 'success')\n    return redirect(url_for('home'))\n```\n",
             "supportThemeIcons": false
         }
     },
