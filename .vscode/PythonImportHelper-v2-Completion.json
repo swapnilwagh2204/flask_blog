@@ -607,10 +607,10 @@
         "kind": 2,
         "importPath": "flaskblog.routes",
         "description": "flaskblog.routes",
-        "peekOfCode": "def home():\n    posts = Post.query.all()\n    return render_template('home.html', posts=posts)\n@app.route(\"/about\")\ndef about():\n    return render_template('about.html', title='About')\n@app.route(\"/register\", methods=['GET', 'POST'])\ndef register():\n    if current_user.is_authenticated:\n        return redirect(url_for('home'))",
+        "peekOfCode": "def home():\n    page = request.args.get(\"page\", 1, type=int)  # default page is 1  /?page=2\n    posts = Post.query.order_by(\n        Post.date_posted.desc()).paginate(page=page, per_page=3)\n    return render_template('home.html', posts=posts)\n@app.route(\"/about\")\ndef about():\n    return render_template('about.html', title='About')\n# register the user\n@app.route(\"/register\", methods=['GET', 'POST'])",
         "detail": "flaskblog.routes",
         "documentation": {
-            "value": "\n```python\nfrom flaskblog.routes import home\n```\n\n```python\n\n\n```\n\n```python\ndef home():\n    posts = Post.query.all()\n    return render_template('home.html', posts=posts)\n@app.route(\"/about\")\ndef about():\n    return render_template('about.html', title='About')\n@app.route(\"/register\", methods=['GET', 'POST'])\ndef register():\n    if current_user.is_authenticated:\n        return redirect(url_for('home'))\n```\n",
+            "value": "\n```python\nfrom flaskblog.routes import home\n```\n\n```python\n\n\n```\n\n```python\ndef home():\n    page = request.args.get(\"page\", 1, type=int)  # default page is 1  /?page=2\n    posts = Post.query.order_by(\n        Post.date_posted.desc()).paginate(page=page, per_page=3)\n    return render_template('home.html', posts=posts)\n@app.route(\"/about\")\ndef about():\n    return render_template('about.html', title='About')\n# register the user\n@app.route(\"/register\", methods=['GET', 'POST'])\n```\n",
             "supportThemeIcons": false
         }
     },
@@ -619,10 +619,10 @@
         "kind": 2,
         "importPath": "flaskblog.routes",
         "description": "flaskblog.routes",
-        "peekOfCode": "def about():\n    return render_template('about.html', title='About')\n@app.route(\"/register\", methods=['GET', 'POST'])\ndef register():\n    if current_user.is_authenticated:\n        return redirect(url_for('home'))\n    form = RegistrationForm()\n    if form.validate_on_submit():\n        hashed_password = bcrypt.generate_password_hash(\n            form.password.data).decode('utf-8')",
+        "peekOfCode": "def about():\n    return render_template('about.html', title='About')\n# register the user\n@app.route(\"/register\", methods=['GET', 'POST'])\ndef register():\n    if current_user.is_authenticated:\n        return redirect(url_for('home'))\n    form = RegistrationForm()\n    if form.validate_on_submit():\n        hashed_password = bcrypt.generate_password_hash(",
         "detail": "flaskblog.routes",
         "documentation": {
-            "value": "\n```python\nfrom flaskblog.routes import about\n```\n\n```python\n\n\n```\n\n```python\ndef about():\n    return render_template('about.html', title='About')\n@app.route(\"/register\", methods=['GET', 'POST'])\ndef register():\n    if current_user.is_authenticated:\n        return redirect(url_for('home'))\n    form = RegistrationForm()\n    if form.validate_on_submit():\n        hashed_password = bcrypt.generate_password_hash(\n            form.password.data).decode('utf-8')\n```\n",
+            "value": "\n```python\nfrom flaskblog.routes import about\n```\n\n```python\n\n\n```\n\n```python\ndef about():\n    return render_template('about.html', title='About')\n# register the user\n@app.route(\"/register\", methods=['GET', 'POST'])\ndef register():\n    if current_user.is_authenticated:\n        return redirect(url_for('home'))\n    form = RegistrationForm()\n    if form.validate_on_submit():\n        hashed_password = bcrypt.generate_password_hash(\n```\n",
             "supportThemeIcons": false
         }
     },
@@ -703,10 +703,10 @@
         "kind": 2,
         "importPath": "flaskblog.routes",
         "description": "flaskblog.routes",
-        "peekOfCode": "def post(post_id):\n    post = Post.query.get_or_404(post_id)\n    return render_template('post.html', title=post.title, post=post)\n@app.route('/post/<int:post_id>/update', methods=['GET', 'POST'])\n@login_required\ndef update_post(post_id):\n    post = Post.query.get_or_404(post_id)\n    if post.author != current_user:\n        abort(403)\n    form = PostForm()",
+        "peekOfCode": "def post(post_id):\n    post = Post.query.get_or_404(post_id)\n    return render_template('post.html', title=post.title, post=post)\n# update particular post\n@app.route('/post/<int:post_id>/update', methods=['GET', 'POST'])\n@login_required\ndef update_post(post_id):\n    post = Post.query.get_or_404(post_id)\n    if post.author != current_user:\n        abort(403)",
         "detail": "flaskblog.routes",
         "documentation": {
-            "value": "\n```python\nfrom flaskblog.routes import post\n```\n\n```python\n\n\n```\n\n```python\ndef post(post_id):\n    post = Post.query.get_or_404(post_id)\n    return render_template('post.html', title=post.title, post=post)\n@app.route('/post/<int:post_id>/update', methods=['GET', 'POST'])\n@login_required\ndef update_post(post_id):\n    post = Post.query.get_or_404(post_id)\n    if post.author != current_user:\n        abort(403)\n    form = PostForm()\n```\n",
+            "value": "\n```python\nfrom flaskblog.routes import post\n```\n\n```python\n\n\n```\n\n```python\ndef post(post_id):\n    post = Post.query.get_or_404(post_id)\n    return render_template('post.html', title=post.title, post=post)\n# update particular post\n@app.route('/post/<int:post_id>/update', methods=['GET', 'POST'])\n@login_required\ndef update_post(post_id):\n    post = Post.query.get_or_404(post_id)\n    if post.author != current_user:\n        abort(403)\n```\n",
             "supportThemeIcons": false
         }
     },
@@ -727,10 +727,22 @@
         "kind": 2,
         "importPath": "flaskblog.routes",
         "description": "flaskblog.routes",
-        "peekOfCode": "def delete_post(post_id):\n    post = Post.query.get_or_404(post_id)\n    if post.author != current_user:\n        abort(403)\n    db.session.delete(post)\n    db.session.commit()\n    flash('your post has been deleted', 'success')\n    return redirect(url_for('home'))",
+        "peekOfCode": "def delete_post(post_id):\n    post = Post.query.get_or_404(post_id)\n    if post.author != current_user:\n        abort(403)\n    db.session.delete(post)\n    db.session.commit()\n    flash('your post has been deleted', 'success')\n    return redirect(url_for('home'))\n# particular users post\n@app.route(\"/user/<string:username>\")",
         "detail": "flaskblog.routes",
         "documentation": {
-            "value": "\n```python\nfrom flaskblog.routes import delete_post\n```\n\n```python\n\n\n```\n\n```python\ndef delete_post(post_id):\n    post = Post.query.get_or_404(post_id)\n    if post.author != current_user:\n        abort(403)\n    db.session.delete(post)\n    db.session.commit()\n    flash('your post has been deleted', 'success')\n    return redirect(url_for('home'))\n```\n",
+            "value": "\n```python\nfrom flaskblog.routes import delete_post\n```\n\n```python\n\n\n```\n\n```python\ndef delete_post(post_id):\n    post = Post.query.get_or_404(post_id)\n    if post.author != current_user:\n        abort(403)\n    db.session.delete(post)\n    db.session.commit()\n    flash('your post has been deleted', 'success')\n    return redirect(url_for('home'))\n# particular users post\n@app.route(\"/user/<string:username>\")\n```\n",
+            "supportThemeIcons": false
+        }
+    },
+    {
+        "label": "user_post",
+        "kind": 2,
+        "importPath": "flaskblog.routes",
+        "description": "flaskblog.routes",
+        "peekOfCode": "def user_post(username):\n    page = request.args.get(\"page\", 1, type=int)  # default page is 1  /?page=2\n    user = User.query.filter_by(username=username).first_or_404()\n    posts = Post.query.filter_by(author=user)\\\n        .order_by(Post.date_posted.desc())\\\n        .paginate(page=page, per_page=3)\n    return render_template('userpost.html', posts=posts, user=user)",
+        "detail": "flaskblog.routes",
+        "documentation": {
+            "value": "\n```python\nfrom flaskblog.routes import user_post\n```\n\n```python\n\n\n```\n\n```python\ndef user_post(username):\n    page = request.args.get(\"page\", 1, type=int)  # default page is 1  /?page=2\n    user = User.query.filter_by(username=username).first_or_404()\n    posts = Post.query.filter_by(author=user)\\\n        .order_by(Post.date_posted.desc())\\\n        .paginate(page=page, per_page=3)\n    return render_template('userpost.html', posts=posts, user=user)\n```\n",
             "supportThemeIcons": false
         }
     },
